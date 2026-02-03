@@ -9,6 +9,7 @@ import ProductKits from "@/components/ProductKits";
 import Guarantee from "@/components/Guarantee";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import Support from "@/components/Support";
 
 const Index = () => {
   return (
@@ -23,6 +24,7 @@ const Index = () => {
       <ProductKits />
       <Guarantee />
       <FAQ />
+      <Support />
       <Footer />
     </div>
   );

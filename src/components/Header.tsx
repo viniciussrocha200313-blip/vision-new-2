@@ -63,6 +63,12 @@ const Header = () => {
           >
             Comprar
           </button>
+          <button
+            onClick={() => scrollToSection("suporte")}
+            className="text-sm font-medium hover:text-primary transition-smooth"
+          >
+            Suporte
+          </button>
         </nav>
 
         <Button

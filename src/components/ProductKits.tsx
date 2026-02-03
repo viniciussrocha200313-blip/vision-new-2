@@ -1,33 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import vision1Bottle from "@/assets/vision-1-bottle.png";
-import vision3Bottles from "@/assets/vision-3-bottles.png";
-import vision5Bottles from "@/assets/vision-5-bottles.png";
-
-const kits = [
-  {
-    image: vision1Bottle,
-    title: "Kit 1 Frasco",
-    subtitle: "Início do Tratamento",
-    description: "Ideal para experimentar os benefícios do Vision NEW",
-    badge: null,
-  },
-  {
-    image: vision3Bottles,
-    title: "Kit 3 Frascos",
-    subtitle: "Tratamento Completo",
-    description: "A escolha mais popular para resultados consistentes",
-    badge: "Mais Vendido",
-  },
-  {
-    image: vision5Bottles,
-    title: "Kit 5 Frascos",
-    subtitle: "Resultados Máximos",
-    description: "O melhor custo-benefício para um tratamento prolongado",
-    badge: "Melhor Oferta",
-  },
-];
 
 const ProductKits = () => {
   return (
@@ -42,41 +15,51 @@ const ProductKits = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {kits.map((kit, index) => (
-            <Card
-              key={index}
-              className="overflow-hidden hover:vision-shadow-lg transition-smooth hover:-translate-y-2 animate-scale-in relative"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              {kit.badge && (
-                <Badge className="absolute top-4 right-4 z-10 bg-[hsl(var(--vision-gold))] text-foreground font-bold px-3 py-1">
-                  {kit.badge}
-                </Badge>
-              )}
-              
-              <div className="bg-gradient-to-br from-accent/30 to-accent/10 p-8 flex justify-center">
-                <img
-                  src={kit.image}
-                  alt={kit.title}
-                  className="w-full max-w-[200px] h-auto drop-shadow-xl hover:scale-110 transition-smooth"
-                />
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-2">{kit.title}</h3>
-                <p className="text-primary font-semibold mb-3">{kit.subtitle}</p>
-                <p className="text-muted-foreground mb-6 leading-relaxed">{kit.description}</p>
-                
-                <Button
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-full transition-smooth hover:scale-105"
-                  size="lg"
+        <div className="max-w-3xl mx-auto">
+          <Card className="overflow-hidden hover:vision-shadow-lg transition-smooth hover:-translate-y-2 animate-scale-in">
+            <div className="bg-gradient-to-br from-accent/30 to-accent/10 p-8 flex justify-center">
+              <img
+                src={vision1Bottle}
+                alt="Tratamento de 1 mês Vision NEW"
+                className="w-full max-w-[220px] h-auto drop-shadow-xl hover:scale-110 transition-smooth"
+              />
+            </div>
+
+            <div className="p-8">
+              <p className="uppercase tracking-[0.3em] text-xs font-semibold text-primary mb-3">
+                Tratamento de 1 mês
+              </p>
+              <h3 className="text-3xl font-bold text-foreground mb-4">Plano Essencial</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Perfeito para iniciar seu cuidado ocular. Um frasco garante 30 dias de uso contínuo,
+                desenvolvendo o hábito diário e permitindo sentir os primeiros resultados.
+              </p>
+
+              <ul className="space-y-3 mb-8 text-sm text-foreground/80">
+                <li>• 1 frasco Vision NEW (30 doses)</li>
+                <li>• Indicado para o primeiro ciclo de tratamento</li>
+                <li>• Garantia de satisfação e suporte dedicado</li>
+              </ul>
+
+              <Button
+                className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-full transition-smooth hover:scale-105"
+                size="lg"
+                asChild
+              >
+                <a
+                  href="https://ev.braip.com/checkout/plawojdw/chemxvdk"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Comprar Agora
-                </Button>
-              </div>
-            </Card>
-          ))}
+                </a>
+              </Button>
+
+              <p className="mt-4 text-center text-sm text-muted-foreground">
+                Envio rápido para todo o Brasil com rastreio incluso.
+              </p>
+            </div>
+          </Card>
         </div>
       </div>
     </section>
